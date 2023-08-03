@@ -56,5 +56,4 @@ class Solution(object):
         return nums1
     
 nums1, m, nums2, n = [1, 2, 3], 3, [4, 5, 6], 3
-
 print('Res:', Solution().merge(nums1, m, nums2, n))
