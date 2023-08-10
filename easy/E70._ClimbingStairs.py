@@ -33,15 +33,17 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-
-        count_ways = 0
-
-        if(n == 1):
-            count_ways += 1
-            return count_ways
+        prev = 1
+        prev2 = 0
+        for i in range(1, n+1):
+            curi = prev + prev2
+            prev2 = prev
+            prev = curi
+            print(prev, prev2)
+        return prev 
         
 
 
 
-n = 1
-print('Res:', Solution().isPalindrome(n))
+n = 5
+print('Res:', Solution().climbStairs(n))
